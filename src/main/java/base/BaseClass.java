@@ -51,4 +51,10 @@ public class BaseClass {
 	public void closeBrowser() {
 		driver.close();
 	}
+
+	public WebDriver navigateToBack() {
+		driver.navigate().back();
+		return driver;
+
+	}
 }
