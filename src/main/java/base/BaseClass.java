@@ -57,4 +57,45 @@ public class BaseClass {
 		return driver;
 
 	}
+
+	public WebDriver navigateToForwad() {
+		driver.navigate().forward();
+		return driver;
+
+	}
+
+	public String getCurrentURL() {
+		String currentUrl = driver.getCurrentUrl();
+		return currentUrl;
+
+	}
+
+	public String getTitle() {
+		String title = driver.getTitle();
+		return title;
+
+	}
+
+	private void quitBrowser() {
+		driver.quit();
+
+	}
+
+	public WebDriver windowMinimize() {
+		driver.manage().window().minimize();
+		return driver;
+
+	}
+
+	public WebDriver windowMaximize() {
+		driver.manage().window().maximize();
+		return driver;
+
+	}
+
+	private WebDriver windowFullScreen() {
+		driver.manage().window().fullscreen();
+		return driver;
+
+	}
 }
