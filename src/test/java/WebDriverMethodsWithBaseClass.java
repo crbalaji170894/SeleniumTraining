@@ -24,6 +24,8 @@ public class WebDriverMethodsWithBaseClass {
 		String actualTitle = baseClass.getTitle();
 
 	}
+	
+	
 
 	public static void main(String[] args) {
 		WebDriverMethodsWithBaseClass obj = new WebDriverMethodsWithBaseClass();

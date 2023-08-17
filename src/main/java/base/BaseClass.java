@@ -1,8 +1,10 @@
 package base;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.interactions.Actions;
 
 import constants.Constants;
 
@@ -98,4 +100,35 @@ public class BaseClass {
 		return driver;
 
 	}
+
+	public WebDriver moveToElement(WebDriver driver, WebElement element) {
+
+		Actions acc = new Actions(driver);
+
+		acc.moveToElement(element).click().perform();
+
+		return driver;
+
+	}
+
+	public WebDriver rightClick(WebDriver driver, WebElement element) {
+
+		Actions acc = new Actions(driver);
+
+		acc.contextClick(element).perform();
+
+		return driver;
+
+	}
+
+	public WebDriver doubleClick(WebDriver driver, WebElement element) {
+
+		Actions acc = new Actions(driver);
+
+		acc.doubleClick(element).perform();
+
+		return driver;
+
+	}
+
 }

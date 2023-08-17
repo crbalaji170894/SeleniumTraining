@@ -24,10 +24,13 @@ public class FaceBookLogin {
 	@FindBy(id = "u_0_0_dP")
 	private WebElement createAnAccout;
 
+	@FindBy(xpath = "//a[text()='Messenger']")
+	private WebElement messenger;
+
 	public FaceBookLogin(WebDriver driver) {
-		
+
 		this.driver = driver;
-		
+
 		PageFactory.initElements(driver, this);
 
 	}
@@ -70,6 +73,14 @@ public class FaceBookLogin {
 
 	public void setCreateAnAccout(WebElement createAnAccout) {
 		this.createAnAccout = createAnAccout;
+	}
+
+	public WebElement getMessenger() {
+		return messenger;
+	}
+
+	public void setMessenger(WebElement messenger) {
+		this.messenger = messenger;
 	}
 
 }
