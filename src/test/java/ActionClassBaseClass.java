@@ -74,7 +74,7 @@ public class ActionClassBaseClass {
 
 		// obj.rightClick();
 
-		obj.doubleClick();
+		//obj.doubleClick();
 
 	}
 }

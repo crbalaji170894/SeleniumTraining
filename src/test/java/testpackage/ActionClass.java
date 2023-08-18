@@ -70,17 +70,17 @@ public class ActionClass {
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "//drivers//chromedriver.exe");
 
 		WebDriver driver = new ChromeDriver();
-		
+
 		driver.get("https://the-internet.herokuapp.com/drag_and_drop");
-		
+
 		WebElement w1 = driver.findElement(By.xpath("//div[@id='column-a']"));
-		
+
 		WebElement w2 = driver.findElement(By.xpath("//div[@id='column-b']"));
-		
+
 		Thread.sleep(10000);
-		
+
 		Actions acc = new Actions(driver);
-		
+
 		acc.dragAndDrop(w1, w2).perform();
 	}
 
