@@ -1,5 +1,8 @@
 package base;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -131,4 +134,9 @@ public class BaseClass {
 
 	}
 
+	public Robot robotObject() throws AWTException {
+		Robot robot = new Robot();
+		return robot;
+
+	}
 }
