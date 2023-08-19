@@ -13,7 +13,9 @@ public class Constants {
 	public static final String fbPage = "https://www.facebook.com/";
 
 	public static final String seleniumPage = "https://www.selenium.dev/downloads/";
-	
+
 	public static final String doubleClickSampleSite = "https://demoqa.com/buttons";
+
+	public static final String alertSite= "https://demo.automationtesting.in/Alerts.html";
 
 }

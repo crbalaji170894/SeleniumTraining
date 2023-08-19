@@ -3,6 +3,7 @@ package base;
 import java.awt.AWTException;
 import java.awt.Robot;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -139,4 +140,24 @@ public class BaseClass {
 		return robot;
 
 	}
+
+	public void alertOK(WebDriver driver) {
+
+		Alert al = driver.switchTo().alert();
+		al.accept();
+
+	}
+
+	public void alertCanel(WebDriver driver) {
+		Alert al = driver.switchTo().alert();
+		al.dismiss();
+
+	}
+
+	public void alertSendKeys(WebDriver driver, String text) {
+		Alert al = driver.switchTo().alert();
+		al.sendKeys(text);
+
+	}
+
 }
