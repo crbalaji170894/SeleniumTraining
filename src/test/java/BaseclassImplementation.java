@@ -11,11 +11,11 @@ public class BaseclassImplementation {
 
 		baseClass.launchChromeBrowser();
 
-		baseClass.getPage(Constants.seleniumPage);
+		WebDriver page = baseClass.getPage(Constants.seleniumPage);
 
 		Thread.sleep(5000);
 
-		baseClass.closeBrowser();
+		baseClass.closeBrowser(page);
 
 	}
 
@@ -23,22 +23,22 @@ public class BaseclassImplementation {
 
 		baseClass.launchFirefoxBrowser();
 
-		baseClass.getPage(Constants.fbPage);
+		WebDriver page = baseClass.getPage(Constants.fbPage);
 
 		Thread.sleep(5000);
 
-		baseClass.closeBrowser();
+		baseClass.closeBrowser(page);
 
 	}
 
 	public void testCaseThree_UsingIE() throws InterruptedException {
 		baseClass.launchieBrowser();
 
-		baseClass.getPage(Constants.seleniumPage);
+		WebDriver page = baseClass.getPage(Constants.seleniumPage);
 
 		Thread.sleep(5000);
 
-		baseClass.closeBrowser();
+		baseClass.closeBrowser(page);
 
 	}
 

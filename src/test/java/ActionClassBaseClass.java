@@ -23,7 +23,7 @@ public class ActionClassBaseClass {
 
 		Thread.sleep(10000);
 
-		baseClass.closeBrowser();
+		baseClass.closeBrowser(page);
 
 	}
 
@@ -39,7 +39,7 @@ public class ActionClassBaseClass {
 
 		Thread.sleep(10000);
 
-		baseClass.closeBrowser();
+		baseClass.closeBrowser(page);
 
 	}
 
@@ -63,7 +63,7 @@ public class ActionClassBaseClass {
 //			System.out.println("Successfully done double click");
 //		}
 
-		baseClass.closeBrowser();
+		baseClass.closeBrowser(page);
 	}
 
 	public static void main(String[] args) throws InterruptedException {
