@@ -2,12 +2,21 @@ package base;
 
 import java.awt.AWTException;
 import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
+import java.io.File;
+import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.Date;
 import java.util.List;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -194,6 +203,44 @@ public class BaseClass {
 			}
 
 		}
+
+	}
+
+	public void screenShot(WebDriver driver) throws IOException {
+		Date date = new Date();
+
+		TakesScreenshot screenShot = (TakesScreenshot) driver;
+
+		File sourceFile = screenShot.getScreenshotAs(OutputType.FILE);
+
+		File destinationLocation = new File(Constants.projectPath + "//screenshots//" + date.getTime() + ".png");
+
+		FileUtils.copyFile(sourceFile, destinationLocation);
+
+	}
+
+	public void uploadFileUsingRobotClass(String path) throws InterruptedException, AWTException {
+		StringSelection filePath = new StringSelection(path);
+
+		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(filePath, null);
+
+		Thread.sleep(10000);
+
+		Robot robot = new Robot();
+
+		robot.delay(250);
+
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.keyRelease(KeyEvent.VK_ENTER);
+
+		robot.keyPress(KeyEvent.VK_CONTROL);
+		robot.keyPress(KeyEvent.VK_V);
+		robot.keyRelease(KeyEvent.VK_V);
+		robot.keyRelease(KeyEvent.VK_CONTROL);
+
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.delay(90);
+		robot.keyRelease(KeyEvent.VK_ENTER);
 
 	}
 

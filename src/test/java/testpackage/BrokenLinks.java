@@ -15,6 +15,8 @@ public class BrokenLinks {
 
 	public static void main(String[] args) throws IOException, MalformedURLException {
 
+		int brokenCount =0;
+		int validCount =0;
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "//drivers//chromedriver.exe");
 
 		WebDriver driver = new ChromeDriver();
@@ -39,16 +41,23 @@ public class BrokenLinks {
 				if (connection.getResponseCode() >= 400) {
 					System.out.println(connection.getResponseMessage());
 					System.out.println(hrefurl + " is  broken Link");
+					brokenCount++;
+					
 				} else {
 					System.out.println(connection.getResponseMessage());
 					System.out.println(hrefurl + " is not broken Link");
+					validCount++;
 				}
 
 			} catch (Exception e) {
 				System.out.println(e);
 			}
+			
 
 		}
+		
+		System.out.println(brokenCount);
+		System.out.println(validCount);
 
 	}
 }

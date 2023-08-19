@@ -16,8 +16,10 @@ public class Constants {
 
 	public static final String doubleClickSampleSite = "https://demoqa.com/buttons";
 
-	public static final String alertSite= "https://demo.automationtesting.in/Alerts.html";
-	
-	public static final String brokenLink= "https://demoqa.com/broken";
+	public static final String alertSite = "https://demo.automationtesting.in/Alerts.html";
+
+	public static final String brokenLink = "https://demoqa.com/broken";
+
+	public static final String uploadFilePage = "https://easyupload.io/";
 
 }
