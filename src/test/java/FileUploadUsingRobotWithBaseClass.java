@@ -14,7 +14,7 @@ public class FileUploadUsingRobotWithBaseClass {
 		baseClass.launchChromeBrowser();
 
 		WebDriver page = baseClass.getPage(Constants.uploadFilePage);
-		
+
 		Thread.sleep(10000);
 
 		UploadFilePage uploadPage = new UploadFilePage(page);
@@ -25,7 +25,7 @@ public class FileUploadUsingRobotWithBaseClass {
 				"C:\\Users\\Kisho\\eclipse-workspace\\SeleniumTraining\\screenshots\\scr1.png");
 
 		uploadPage.getUploadButton().click();
-		
+
 		Thread.sleep(15000);
 
 		System.out.println(baseClass.getCurrentURL());
